@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "718646568759",
+    "project_id": "mobile-app-final-cr7",
+    "storage_bucket": "mobile-app-final-cr7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718646568759:android:c21cf6e998e377946b1cb2",
+        "android_client_info": {
+          "package_name": "com.example.invoicemobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718646568759-9jekdu9mqturf1vlse0tvamhu651n6q7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDhVLJ6PQYpQrz5U4N7IjjyuDWbmF8XIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718646568759-9jekdu9mqturf1vlse0tvamhu651n6q7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "718646568759-3ur481cieb64rrb46fneba680a2la4t5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.concordeappfinal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
