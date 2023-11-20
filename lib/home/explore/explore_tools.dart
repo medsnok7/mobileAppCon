@@ -143,7 +143,10 @@ AppBar customAppBar(BuildContext context) {
         ),
       ),
       backgroundColor: AppColors.backgroundColor,
-      title: Text(FirebaseAuth.instance.currentUser!.displayName ?? "Unknown"),
+      title: Text(
+        FirebaseAuth.instance.currentUser!.displayName ?? "Unknown",
+        style: const TextStyle(fontWeight: AppFontWeights.titleFW),
+      ),
       actions: [
         Padding(
           padding: const EdgeInsets.all(15.0),

@@ -76,26 +76,81 @@ class _ProfileViewState extends State<ProfileView> {
                   ),
                 ),
                 const SizedBox(height: 50),
-                appButton(
-                    "Change Password",
-                    AppColors.themeColor,
-                    AppColors.titleColor,
-                    Colors.transparent,
-                    360.w,
-                    50.h,
-                    0,
-                    () {}),
-                SizedBox(height: 1.h),
-                appButton("Log Out", AppColors.themeColor, AppColors.titleColor,
-                    Colors.transparent, 360.w, 50.h, 0, () async {
-                  try {
-                    await FirebaseAuth.instance.signOut();
-                    Get.to(() => const SignInView(),
-                        duration: const Duration(milliseconds: 250));
-                  } catch (e) {
-                    print(e);
-                  }
-                }),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      appButton(
+                          "Change Password",
+                          AppColors.backgroundColor,
+                          AppColors.titleColor,
+                          Colors.transparent,
+                          290.w,
+                          45.h,
+                          0,
+                          () {}),
+                      Container(
+                        height: 40.h,
+                        width: 40.w,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.h)),
+                        child: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: AppColors.textColor,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 2.h,
+                  width: 340.w,
+                  color: AppColors.titleColor.withOpacity(0.1),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      appButton(
+                        "Log Out",
+                        AppColors.backgroundColor,
+                        AppColors.titleColor,
+                        Colors.transparent,
+                        290.w,
+                        45.h,
+                        0,
+                        () async {
+                          try {
+                            await FirebaseAuth.instance.signOut();
+                            Get.to(() => const SignInView(),
+                                duration: const Duration(milliseconds: 250));
+                          } catch (e) {
+                            print(e);
+                          }
+                        },
+                      ),
+                      Container(
+                        height: 40.h,
+                        width: 40.w,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20.h)),
+                        child: const Icon(
+                          Icons.arrow_forward_ios,
+                          color: AppColors.textColor,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 2.h,
+                  width: 340.w,
+                  color: AppColors.titleColor.withOpacity(0.1),
+                ),
               ],
             ),
             Expanded(child: Container()),

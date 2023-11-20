@@ -1,4 +1,3 @@
-
 import 'tool_exports.dart';
 
 AppBar appBarWidget(String text, double size, Color color) {
@@ -177,14 +176,12 @@ Widget appButton(
         color: color,
         borderRadius: BorderRadius.circular(borderRadius),
       ),
-      child: Center(
-        child: Text(
-          textButton,
-          style: TextStyle(
-              color: AppColors.buttonTextColor,
-              fontWeight: AppFontWeights.buttonTextFW,
-              fontSize: AppSizes.buttonTextSize),
-        ),
+      child: Text(
+        textButton,
+        style: TextStyle(
+            color: textColor,
+            fontWeight: AppFontWeights.buttonTextFW,
+            fontSize: AppSizes.buttonTextSize),
       ),
     ),
   );

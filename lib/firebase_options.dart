@@ -44,39 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC74aroWzUGvCFb0uc5c6ROmlaTk6ghWoA',
-    appId: '1:718646568759:web:24e6f2a8c3e3f3146b1cb2',
-    messagingSenderId: '718646568759',
-    projectId: 'mobile-app-final-cr7',
-    authDomain: 'mobile-app-final-cr7.firebaseapp.com',
-    storageBucket: 'mobile-app-final-cr7.appspot.com',
+    apiKey: 'AIzaSyD18O4oEbib_QDYqP6U1M0nKrOyCaTaWaw',
+    appId: '1:852940351541:web:2cbe795f516e801cbe697c',
+    messagingSenderId: '852940351541',
+    projectId: 'concordemobileapp',
+    authDomain: 'concordemobileapp.firebaseapp.com',
+    storageBucket: 'concordemobileapp.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDDhVLJ6PQYpQrz5U4N7IjjyuDWbmF8XIQ',
-    appId: '1:718646568759:android:c21cf6e998e377946b1cb2',
-    messagingSenderId: '718646568759',
-    projectId: 'mobile-app-final-cr7',
-    storageBucket: 'mobile-app-final-cr7.appspot.com',
+    apiKey: 'AIzaSyBDTfH1ykzd5rZCiSeX9a4g6KBzvqASeW8',
+    appId: '1:852940351541:android:a0a9da583c601b44be697c',
+    messagingSenderId: '852940351541',
+    projectId: 'concordemobileapp',
+    storageBucket: 'concordemobileapp.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCPAcPfOXceg5nMP8sK5LpGjYMwrWmKdWY',
-    appId: '1:718646568759:ios:0686a6d5187124616b1cb2',
-    messagingSenderId: '718646568759',
-    projectId: 'mobile-app-final-cr7',
-    storageBucket: 'mobile-app-final-cr7.appspot.com',
-    iosClientId: '718646568759-3ur481cieb64rrb46fneba680a2la4t5.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAEEyFNcCkhthhJLa1Xiz0NRiydnNN2b_8',
+    appId: '1:852940351541:ios:e9f3e5b8bc0ae8e3be697c',
+    messagingSenderId: '852940351541',
+    projectId: 'concordemobileapp',
+    storageBucket: 'concordemobileapp.appspot.com',
+    iosClientId: '852940351541-el04nnkm6v9g3ajmnrarrmbouo11v1mt.apps.googleusercontent.com',
     iosBundleId: 'com.example.concordeappfinal',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCPAcPfOXceg5nMP8sK5LpGjYMwrWmKdWY',
-    appId: '1:718646568759:ios:012bf6217bedf8216b1cb2',
-    messagingSenderId: '718646568759',
-    projectId: 'mobile-app-final-cr7',
-    storageBucket: 'mobile-app-final-cr7.appspot.com',
-    iosClientId: '718646568759-cp1jtjjmr2hjbs4c2oftc15shfobttnk.apps.googleusercontent.com',
+    apiKey: 'AIzaSyAEEyFNcCkhthhJLa1Xiz0NRiydnNN2b_8',
+    appId: '1:852940351541:ios:13700b2f27342f18be697c',
+    messagingSenderId: '852940351541',
+    projectId: 'concordemobileapp',
+    storageBucket: 'concordemobileapp.appspot.com',
+    iosClientId: '852940351541-82rvqu308iblg1l8qcdf9v2ha82tk8qk.apps.googleusercontent.com',
     iosBundleId: 'com.example.concordeappfinal.RunnerTests',
   );
 }

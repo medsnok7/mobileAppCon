@@ -7,5 +7,5 @@ class AppFontWeights {
   static const FontWeight priceFW = FontWeight.w800;
   static const FontWeight descriptionFW = FontWeight.w400;
   static const FontWeight numberFW = FontWeight.w900;
-  static const FontWeight buttonTextFW = FontWeight.w600;
+  static const FontWeight buttonTextFW = FontWeight.w400;
 }

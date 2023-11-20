@@ -119,35 +119,18 @@ class _SignUpViewState extends State<SignUpView> {
                             ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                     content: Text(
-                                        '''Use a mix of uppercase and lowercase letters.\nMake it at least 8 characters long''')));
+                                        'Use a mix of uppercase and lowercase letters.\nMake it at least 8 characters long')));
                             return 'Password is weak ';
                           }
                           return null;
                         },
                       ),
-                      // FlutterPwValidator(
-                      //   controller: password,
-                      //   minLength: 8,
-                      //   uppercaseCharCount: 1,
-                      //   width: 300.w,
-                      //   height: 60.h,
-                      //   onSuccess: () {
-                      //     setState(() {
-                      //       isSuccess = true;
-                      //     });
-                      //   },
-                      //   onFail: () {
-                      //     setState(() {
-                      //       isSuccess = false;
-                      //     });
-                      //   },
-                      // ),
                       appTextArea(
                         rePassword,
                         12.sp,
                         "Confirm password",
                         true,
-                        TextInputType.emailAddress,
+                        TextInputType.text,
                         AppColors.textColor,
                         12.sp,
                         Icons.lock,
@@ -170,48 +153,52 @@ class _SignUpViewState extends State<SignUpView> {
                         ],
                       ),
                       SizedBox(height: 5.h),
-                      appButton(
+                      GestureDetector(
+                        onTap: () async {
+                          String error;
+                          String email1 = email.text;
+                          String password1 = password.text;
+                          try {
+                            if (_formKey.currentState!.validate() == true) {
+                              final userCredential = await FirebaseAuth.instance
+                                  .createUserWithEmailAndPassword(
+                                      email: email1, password: password1);
+                              User user = userCredential.user!;
+                              await user.updateDisplayName(userName.text);
+                              print(userCredential);
+                              Get.to(() => const SignInView(),
+                                  transition: Transition.downToUp,
+                                  duration: const Duration(milliseconds: 500));
+                              print(rePassword.text.length.toString());
+                            }
+                          } on FirebaseAuthException catch (e) {
+                            switch (e.code) {
+                              case "invalid-email":
+                                error = "Email is invalid";
+                                break;
+                              case "weak-password":
+                                error = "Password is weak";
+                                break;
+                              case "email-already-in-use":
+                                error = "Email is already in use";
+                                break;
+                              default:
+                                error = "Please enter your data";
+                            }
+                            ScaffoldMessenger.of(context)
+                                .showSnackBar(SnackBar(content: Text(error)));
+                          }
+                        },
+                        child: appButtonPrf(
                           "Signup",
                           AppColors.buttonColor,
                           AppColors.buttonTextColor,
                           Colors.transparent,
                           300.w,
                           50.h,
-                          15, () async {
-                        String error;
-                        String email1 = email.text;
-                        String password1 = password.text;
-                        try {
-                          if (_formKey.currentState!.validate() == false) {
-                            final userCredential = await FirebaseAuth.instance
-                                .createUserWithEmailAndPassword(
-                                    email: email1, password: password1);
-                            User user = userCredential.user!;
-                            await user.updateDisplayName(userName.text);
-                            print(userCredential);
-                            Get.to(() => const SignInView(),
-                                transition: Transition.downToUp,
-                                duration: const Duration(milliseconds: 500));
-                            print(rePassword.text.length.toString());
-                          }
-                        } on FirebaseAuthException catch (e) {
-                          switch (e.code) {
-                            case "invalid-email":
-                              error = "Email is invalid";
-                              break;
-                            case "weak-password":
-                              error = "Password is weak";
-                              break;
-                            case "email-already-in-use":
-                              error = "Email is already in use";
-                              break;
-                            default:
-                              error = "Please enter your data";
-                          }
-                          ScaffoldMessenger.of(context)
-                              .showSnackBar(SnackBar(content: Text(error)));
-                        }
-                      }),
+                          15,
+                        ),
+                      ),
                       SizedBox(height: 5.h),
                       appRichText(
                           context,

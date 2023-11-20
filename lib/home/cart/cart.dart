@@ -11,7 +11,6 @@ import '../../style/font_weights.dart';
 import '../../style/sizes.dart';
 import '../form/form_page.dart';
 
-
 class CartView extends StatefulWidget {
   const CartView({super.key});
 
@@ -49,11 +48,11 @@ class _CartViewState extends State<CartView> {
               ),
             ),
           ),
-          body:  Column(
+          body: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-                    FutureBuilder(
+              FutureBuilder(
                 future: cart.getCartData(),
                 builder: (context, AsyncSnapshot<List<Cart>> snapshot) {
                   if (!snapshot.hasData || snapshot.data!.isEmpty) {
@@ -213,7 +212,7 @@ class _CartViewState extends State<CartView> {
                                                   ),
                                                   Container(
                                                     margin: const EdgeInsets
-                                                            .symmetric(
+                                                        .symmetric(
                                                         horizontal: 10),
                                                     child: Text(
                                                       snapshot
@@ -420,19 +419,22 @@ class _CartViewState extends State<CartView> {
                                   ],
                                 ),
                                 SizedBox(height: 20.h),
-                                appButton(
-                                    "Proceed",
-                                    AppColors.buttonColor,
-                                    AppColors.buttonTextColor,
-                                    Colors.transparent,
-                                    300.w,
-                                    50.h,
-                                    15, () {
-                                  Get.to(() => const FormView(),
-                                      duration:
-                                          const Duration(milliseconds: 250),
-                                      transition: Transition.downToUp);
-                                })
+                                GestureDetector(
+                                  onTap: () {
+                                    Get.to(() => const FormView(),
+                                        duration:
+                                            const Duration(milliseconds: 250),
+                                        transition: Transition.downToUp);
+                                  },
+                                  child: appButtonPrf(
+                                      "Proceed",
+                                      AppColors.buttonColor,
+                                      AppColors.buttonTextColor,
+                                      Colors.transparent,
+                                      300.w,
+                                      50.h,
+                                      15),
+                                )
                               ],
                             ),
                           );
@@ -442,8 +444,7 @@ class _CartViewState extends State<CartView> {
                   }
                 },
               ),
-
-                  ],
+            ],
           ),
         ),
       ),

@@ -42,13 +42,6 @@ class DBHelper {
     return cart;
   }
 
-  // Future<Invoices> insertInvoice(Invoices invoice) async {
-  //   var dbClient = await db;
-  //   await dbClient!.insert('invoice', invoice.toMap());
-  //   return invoice;
-  // }
-
-  
 
   Future<List<Cart>> getCartList() async {
     var dbClient = await db;
@@ -56,9 +49,6 @@ class DBHelper {
         await dbClient!.query('cart');
     return queryResult.map((e) => Cart.fromMap(e)).toList();
   }
-
-
-
 
   Future<int> removeFromCart(int id) async {
     var dbClient = await db;

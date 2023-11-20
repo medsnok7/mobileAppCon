@@ -1,40 +1,76 @@
 {
   "project_info": {
-    "project_number": "718646568759",
-    "project_id": "mobile-app-final-cr7",
-    "storage_bucket": "mobile-app-final-cr7.appspot.com"
+    "project_number": "852940351541",
+    "project_id": "concordemobileapp",
+    "storage_bucket": "concordemobileapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:718646568759:android:c21cf6e998e377946b1cb2",
+        "mobilesdk_app_id": "1:852940351541:android:a0a9da583c601b44be697c",
         "android_client_info": {
           "package_name": "com.example.invoicemobileapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "718646568759-9jekdu9mqturf1vlse0tvamhu651n6q7.apps.googleusercontent.com",
+          "client_id": "852940351541-0phm1kr5l47eo7jjpddmbq3hp87knani.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDDhVLJ6PQYpQrz5U4N7IjjyuDWbmF8XIQ"
+          "current_key": "AIzaSyBDTfH1ykzd5rZCiSeX9a4g6KBzvqASeW8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "718646568759-9jekdu9mqturf1vlse0tvamhu651n6q7.apps.googleusercontent.com",
+              "client_id": "852940351541-0phm1kr5l47eo7jjpddmbq3hp87knani.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "718646568759-3ur481cieb64rrb46fneba680a2la4t5.apps.googleusercontent.com",
+              "client_id": "852940351541-7m7p73oas659r4bvrc9o5ah8k4vlfm3n.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.concordeappfinal"
+                "bundle_id": "px.concorde.mobileapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852940351541:android:2f66a557855cd430be697c",
+        "android_client_info": {
+          "package_name": "px.concorde.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852940351541-0phm1kr5l47eo7jjpddmbq3hp87knani.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDTfH1ykzd5rZCiSeX9a4g6KBzvqASeW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852940351541-0phm1kr5l47eo7jjpddmbq3hp87knani.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "852940351541-7m7p73oas659r4bvrc9o5ah8k4vlfm3n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "px.concorde.mobileapp"
               }
             }
           ]

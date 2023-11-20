@@ -43,12 +43,28 @@ class _SignInViewState extends State<SignInView> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: 180.w,
-                  width: 375.w,
-                  decoration: const BoxDecoration(
-                    color: AppColors.buttonColor,
-                  ),
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      height: 180.w,
+                      width: 375.w,
+                      decoration: BoxDecoration(
+                        color: AppColors.iconColor.withOpacity(0.1),
+                      ),
+                    ),
+                    Positioned(
+                      child: Container(
+                        height: 150.h,
+                        width: 150.w,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(75.h),
+                            color: AppColors.backgroundColor,
+                            image: const DecorationImage(
+                                image: AssetImage("assets/icons/login.png"))),
+                      ),
+                    )
+                  ],
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, left: 20),
@@ -101,15 +117,8 @@ class _SignInViewState extends State<SignInView> {
                             TextDecoration.none),
                       ),
                       SizedBox(height: 15.sp),
-                      appButton(
-                        "Login",
-                        AppColors.buttonColor,
-                        AppColors.buttonTextColor,
-                        Colors.transparent,
-                        320.w,
-                        50.h,
-                        15,
-                        () async {
+                      GestureDetector(
+                        onTap: () async {
                           String email1 = email.text;
                           String password1 = password.text;
                           String error;
@@ -140,6 +149,15 @@ class _SignInViewState extends State<SignInView> {
                                 .showSnackBar(SnackBar(content: Text(error)));
                           }
                         },
+                        child: appButtonPrf(
+                          "Login",
+                          AppColors.buttonColor,
+                          AppColors.buttonTextColor,
+                          Colors.transparent,
+                          320.w,
+                          50.h,
+                          15,
+                        ),
                       ),
                       SizedBox(height: 10.h),
                       appRichText(
